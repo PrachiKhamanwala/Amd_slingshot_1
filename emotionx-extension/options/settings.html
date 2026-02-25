@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>EmotionX Settings</title>
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <main class="settings-root">
+      <header>
+        <h1>EmotionX Settings</h1>
+        <p>Control modes, privacy, and thresholds.</p>
+      </header>
+
+      <section>
+        <h2>Privacy & Consent</h2>
+        <p id="consent-headline"></p>
+        <ul id="settings-consent-bullets"></ul>
+        <label class="checkbox-row">
+          <input type="checkbox" id="settings-consent-checkbox" />
+          <span>I have read and accept the limitations of emotion inference.</span>
+        </label>
+      </section>
+
+      <section>
+        <h2>Modes</h2>
+        <label class="switch-row">
+          <span>Behavioral Mode (scroll, mouse, clicks)</span>
+          <input type="checkbox" id="settings-behavior-toggle" />
+        </label>
+        <label class="switch-row">
+          <span>Webcam Mode (facial expressions, optional)</span>
+          <input type="checkbox" id="settings-webcam-toggle" />
+        </label>
+      </section>
+
+      <section>
+        <h2>Confidence Threshold</h2>
+        <input type="range" id="settings-confidence-range" min="0.5" max="0.9" step="0.05" />
+        <div class="confidence-label">
+          <span id="settings-confidence-value"></span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Ethical Use</h2>
+        <ul>
+          <li>No dark patterns or manipulative nudges.</li>
+          <li>Emotion signals are approximate and can be wrong.</li>
+          <li>No data leaves your browser.</li>
+        </ul>
+      </section>
+
+      <footer>
+        <button id="settings-save-btn">Save Settings</button>
+      </footer>
+    </main>
+
+    <script type="module" src="settings.js"></script>
+  </body>
+</html>
+
